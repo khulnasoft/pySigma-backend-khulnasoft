@@ -28,12 +28,3 @@ jobs:
       - name: Store coverage for badge
         if: ${{ runner.os == 'Linux' }}
         run: poetry run python print-coverage.py >> $GITHUB_ENV
-      - name: Create coverage badge
-        if: ${{ github.repository == 'khulnasoft/pySigma-backend-khulnasoft' && github.event_name == 'push' && runner.os == 'Linux' }}
-        uses: schneegans/dynamic-badges-action@v1.7.0
-        with:
-          auth: ${{ secrets.GIST_SECRET }}
-          gistID: 2e6acef3324cd025818372422ce96911
-          label: Coverage
-          message: ${{ env.COVERAGE }}
-          color: ${{ env.COVERAGE_COLOR }}
