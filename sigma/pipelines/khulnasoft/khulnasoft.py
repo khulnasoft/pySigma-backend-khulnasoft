@@ -1,3 +1,5 @@
+# pylint: disable=too-many-lines
+import re
 from sigma.pipelines.common import (
     logsource_windows,
     logsource_windows_process_creation,
@@ -22,7 +24,9 @@ from sigma.processing.conditions import (
     RuleProcessingItemAppliedCondition,
 )
 from sigma.processing.pipeline import ProcessingItem, ProcessingPipeline
+from sigma.rule import SigmaRule
 
+import sigma
 windows_sysmon_acceleration_keywords = {  # Map Sysmon event sources and keywords that are added to search for Sysmon optimization pipeline
     "process_creation": "ParentProcessGuid",
     "file_event": "TargetFilename",
