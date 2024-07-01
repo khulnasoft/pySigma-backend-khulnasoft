@@ -1,3 +1,4 @@
+# pylint: disable=too-many-lines
 import re
 from sigma.conversion.state import ConversionState
 from sigma.modifiers import SigmaRegularExpression
