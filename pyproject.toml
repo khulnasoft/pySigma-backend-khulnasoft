@@ -12,15 +12,15 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
-pySigma = "^0.11.1"
+pysigma = "^0.9.10"
 
 [tool.poetry.dev-dependencies]
-black = "^24.1"
-pre-commit = "^3.5"
-pytest = "^8.0"
-pytest-cov = "^5.0"
-defusedxml = "^0.7"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+pytest-cov = "^4.0.0"
+coverage = "^7.2.5"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
